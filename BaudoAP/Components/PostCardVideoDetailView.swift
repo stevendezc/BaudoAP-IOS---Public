@@ -23,10 +23,8 @@ struct PostCardVideoDetailView: View {
     
     
     var body: some View {
-        
                 ScrollViewReader { reader in
                     ScrollView{
-
                         ZStack(alignment: .topTrailing){
    
                             VideoPlayer(player: player)
@@ -35,7 +33,6 @@ struct PostCardVideoDetailView: View {
                                 .cornerRadius(19)
                                 .padding(.horizontal,12)
                         }
-                        
                         
                         HStack{
                             Spacer()
@@ -51,7 +48,7 @@ struct PostCardVideoDetailView: View {
                                     } else {
                                         viewModel.dislikePost(postId: model.id ?? "")
                                     }
-                                    
+                                    viewModel.impactNotification.notificationOccurred(.success)
                                     
                                 } label: {
                                     Image(systemName: "heart.fill")
@@ -66,6 +63,7 @@ struct PostCardVideoDetailView: View {
                                     } else {
                                         viewModel.removeReaction(postId: model.id ?? "")
                                     }
+                                    viewModel.impactNotification.notificationOccurred(.success)
                                 } label: {
                                     Image(systemName: "bookmark.fill")
                                         .font(.system(size: 20))
@@ -185,7 +183,7 @@ struct PostCardVideoDetailView: View {
                                                                 Button("Eliminar commentario") {
                                                                     contentviewmodel.deleteItem(commentId: comment.id)
                                                                 }
-                                                                
+                                                              
                                                             } label: {
                                                                 Image(systemName: "trash.fill")
                                                                     .font(.system(size: 10))
@@ -248,7 +246,7 @@ struct PostCardVideoDetailView: View {
                                 withAnimation(.easeInOut(duration: 100)){
                                     reader.scrollTo("comments", anchor: .top)
                                 }
-        
+                              
                             }, label: {
                                 Image(systemName: "message.fill")
                                     .padding(6)
@@ -337,10 +335,11 @@ struct PostCardVideoDetailView: View {
                                 }
                                 hideKeyboard()
                                 //                print("Pusshed Comment YEYYYY",model.id ?? "")
+                                
                             } else {
                                 hideKeyboard()
                             }
-                                       
+                            
                         } label: {
                             Text("Enviar")
                         }

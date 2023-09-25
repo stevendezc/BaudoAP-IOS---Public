@@ -54,6 +54,7 @@ class AuthViewModel: ObservableObject{
     @Published var PodcastsListenedGuardados: [String] = []
     @Published var RemindersGuardados: [String] = []
     
+    @Published var impactNotification = UINotificationFeedbackGenerator()
     
     @Published var UserComments: [String] = []
     

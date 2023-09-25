@@ -79,10 +79,8 @@ struct TabViews: View {
                                     .resizable()
                                     .frame(width: 15,height: 15, alignment: .trailing)
                                     .foregroundColor(Color("Text"))
-                                
                             }
                         }
-                        
                     }
                     
                     
@@ -164,6 +162,7 @@ struct TabViews: View {
                         .gesture(
                             TapGesture(count: 2)
                                 .onEnded { _ in
+                                    impactNotification.notificationOccurred(.success)
                                     if let lastTapTime = lastTapTime, abs(lastTapTime.timeIntervalSinceNow) < 500.0 {
                                         // Perform the scrolling action here
                                         withAnimation(.linear(duration: 5000)){
@@ -235,6 +234,7 @@ struct TabViews: View {
     }
 }// FIN struct TabViews
 
+
 struct TabViews_Previews: PreviewProvider {
     static var previews: some View {
         TabViews()
@@ -242,6 +242,3 @@ struct TabViews_Previews: PreviewProvider {
         
     }
 }
-
-
-

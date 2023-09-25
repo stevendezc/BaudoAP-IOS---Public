@@ -86,6 +86,7 @@ struct PostCardPodcastDetail: View {
                                             playPause()
                                             print("Button Pressed")
                                             print(audioPlayer.currentTime().seconds)
+                                            viewModel.impactNotification.notificationOccurred(.success)
                                         } label: {
                                             if isPlaying {
                                                 Image("Pause")
@@ -146,7 +147,7 @@ struct PostCardPodcastDetail: View {
                                         } else {
                                             viewModel.dislikePost(postId: model.id ?? "")
                                         }
-                                        
+                                        viewModel.impactNotification.notificationOccurred(.success)
                                         
                                     } label: {
                                         Image(systemName: "heart.fill")
@@ -161,6 +162,7 @@ struct PostCardPodcastDetail: View {
                                         } else {
                                             viewModel.removeReaction(postId: model.id ?? "")
                                         }
+                                        viewModel.impactNotification.notificationOccurred(.success)
                                     } label: {
                                         Image(systemName: "bookmark.fill")
                                             .font(.system(size: 20))
@@ -327,9 +329,7 @@ struct PostCardPodcastDetail: View {
                 .background(Color("BackgroundCards").opacity(0.4))
                 .cornerRadius(20)
                 .padding(10)
-                
-                
-                
+
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -337,7 +337,7 @@ struct PostCardPodcastDetail: View {
                         withAnimation(.easeInOut(duration: 100)){
                             reader.scrollTo("commentsImages", anchor: .top)
                         }
-                        
+                        viewModel.impactNotification.notificationOccurred(.success)
                     }, label: {
                         Image(systemName: "message.fill")
                             .padding(6)
