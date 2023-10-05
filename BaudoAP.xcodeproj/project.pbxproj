@@ -30,6 +30,7 @@
 		26BA70C32A51D87700A27954 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 26BA70C22A51D87700A27954 /* FirebaseStorage */; };
 		26BA70C62A51D89100A27954 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 26BA70C52A51D89100A27954 /* Kingfisher */; };
 		26BA70C82A51E3A800A27954 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA70C72A51E3A800A27954 /* User.swift */; };
+		26BD79122ACF2FFF00E08601 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26BD79112ACF2FFF00E08601 /* GoogleService-Info.plist */; };
 		26BDF0CA2A731999003DBF64 /* Tester 2 .swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BDF0C92A731999003DBF64 /* Tester 2 .swift */; };
 		26C662E22AC09B6B00C87B0D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26C662E12AC09B6B00C87B0D /* FirebaseAnalyticsSwift */; };
 		26C662E62AC0A10A00C87B0D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 26C662E52AC0A10A00C87B0D /* FirebaseAnalytics */; };
@@ -70,7 +71,6 @@
 		5C621CDE2A2A6ADE00E159AC /* PostCardCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C621CDD2A2A6ADE00E159AC /* PostCardCart.swift */; };
 		5C621CE02A2A6CF300E159AC /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C621CDF2A2A6CF300E159AC /* CartButton.swift */; };
 		5C621CE22A2A718800E159AC /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C621CE12A2A718800E159AC /* Checkout.swift */; };
-		5C6807EF29D5EA03005F7B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C6807EE29D5EA03005F7B46 /* GoogleService-Info.plist */; };
 		5C8A53342A3E1E5000B14BA2 /* NavegadorWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A53332A3E1E5000B14BA2 /* NavegadorWeb.swift */; };
 		5C90A5B729BD4B600031FF14 /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A5B629BD4B600031FF14 /* TabViews.swift */; };
 		5CA7219929D93FAC00E04D2E /* VideoNosotros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7219829D93FAC00E04D2E /* VideoNosotros.swift */; };
@@ -116,6 +116,7 @@
 		26BA70B72A51CEA600A27954 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		26BA70B92A51D44600A27954 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		26BA70C72A51E3A800A27954 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		26BD79112ACF2FFF00E08601 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		26BDF0C92A731999003DBF64 /* Tester 2 .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tester 2 .swift"; sourceTree = "<group>"; };
 		26CCB7692ABF525D0084914C /* NotVerified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotVerified.swift; sourceTree = "<group>"; };
 		26D59E7B2AA6A0AC00BC98D3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		5C621CDD2A2A6ADE00E159AC /* PostCardCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCart.swift; sourceTree = "<group>"; };
 		5C621CDF2A2A6CF300E159AC /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		5C621CE12A2A718800E159AC /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
-		5C6807EE29D5EA03005F7B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../Models/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C8A53332A3E1E5000B14BA2 /* NavegadorWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavegadorWeb.swift; sourceTree = "<group>"; };
 		5C90A5B529BD07BD0031FF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C90A5B629BD4B600031FF14 /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 		5C52C70F29BCD8CE002231F2 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5C6807EE29D5EA03005F7B46 /* GoogleService-Info.plist */,
+				26BD79112ACF2FFF00E08601 /* GoogleService-Info.plist */,
 				5C52C71029BCD8CE002231F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -443,8 +443,8 @@
 				5CA8AA9329D14B1500F59CAA /* SofiaSans-ExtraBold.ttf in Resources */,
 				5CA8AA9229D14B1500F59CAA /* SofiaSans-Black.ttf in Resources */,
 				5C52C70E29BCD8CE002231F2 /* Assets.xcassets in Resources */,
+				26BD79122ACF2FFF00E08601 /* GoogleService-Info.plist in Resources */,
 				5CA8AA9629D14B1500F59CAA /* SofiaSans-Bold.ttf in Resources */,
-				5C6807EF29D5EA03005F7B46 /* GoogleService-Info.plist in Resources */,
 				5CA8AA9529D14B1500F59CAA /* SofiaSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,13 +654,13 @@
 				CODE_SIGN_ENTITLEMENTS = BaudoAP/BaudoAP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BaudoAP/Preview Content\"";
 				DEVELOPMENT_TEAM = 6YHPF6JF55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaudoAP/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Baudó Ap";
+				INFOPLIST_KEY_CFBundleDisplayName = "Baudo Ap";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -673,7 +673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.baudoap.BaudoAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -695,13 +695,13 @@
 				CODE_SIGN_ENTITLEMENTS = BaudoAP/BaudoAP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BaudoAP/Preview Content\"";
 				DEVELOPMENT_TEAM = 6YHPF6JF55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaudoAP/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Baudó Ap";
+				INFOPLIST_KEY_CFBundleDisplayName = "Baudo Ap";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -714,7 +714,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.baudoap.BaudoAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -183,10 +183,17 @@ struct TabViews: View {
             }
         }
         .fullScreenCover(isPresented: $IsUserVerified, onDismiss: nil){
-            Text("por favor verifica tu correo electrónico dando click en el enlace en tu bandeja de entrada y/o spam.")
-                .padding()
-                .font(.custom("SofiaSans-Medium",size: 20,relativeTo: .title2))
-                .foregroundStyle(Color("Text"))
+            VStack{
+                Text("Bienvenido a Baudo Ap")
+                    .font(.custom("SofiaSans-Black",size: 25,relativeTo: .title2))
+                    .foregroundStyle(Color("Text"))
+                Text("por favor verifica tu correo electrónico dando click en el enlace en tu bandeja de entrada y/o spam, para confirmar tu correo electronico. ")
+                    .padding()
+                    .font(.custom("SofiaSans-Medium",size: 20,relativeTo: .title2))
+                    .foregroundStyle(Color("Text"))
+                
+            }
+            .padding(40)
             Button{
                 impactNotification.notificationOccurred(.success)
                 viewModel.logout()

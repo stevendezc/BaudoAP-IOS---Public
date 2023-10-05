@@ -83,7 +83,6 @@ struct EventsCard: View {
                 .background(viewModel.RemindersGuardados.contains(model.id ?? "") ? Color("Yellow") : Color(.gray))
                 .foregroundColor(.black)
                 .cornerRadius(30)
-                
             }
         }
         .padding(.bottom,20)

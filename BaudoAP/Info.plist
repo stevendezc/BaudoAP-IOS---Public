@@ -11,7 +11,7 @@
 			<string>Google Sign in</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1055886525857-b34m9jsffh26vbbe32472l4e9vn9nqih</string>
+				<string>com.googleusercontent.apps.1055886525857-o1ao9t835mq1rrdq2eno9a1cc5dj15sb</string>
 			</array>
 		</dict>
 	</array>
@@ -40,5 +40,7 @@
 		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
+	<key>setAnalyticsCollectionEnabled</key>
+	<true/>
 </dict>
 </plist>

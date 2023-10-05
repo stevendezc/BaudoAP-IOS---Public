@@ -43,6 +43,9 @@ struct PostCardPodcastDetail: View {
     
     @State var isPlaying : Bool = false
     
+    @State var isLoading : Bool = true
+    
+    @State private var scale = 1.0
     
     @State private var blurAmount = 0.0
     
@@ -82,20 +85,37 @@ struct PostCardPodcastDetail: View {
                                             .font(.custom("SofiaSans-Bold", size: 18,relativeTo: .title))
                                             .fontWeight(.heavy)
                                         Spacer()
-                                        Button {
-                                            playPause()
-                                            print("Button Pressed")
-                                            print(audioPlayer.currentTime().seconds)
-                                            viewModel.impactNotification.notificationOccurred(.success)
-                                        } label: {
-                                            if isPlaying {
-                                                Image("Pause")
+                                        
+                                     
+                                            
+                                            if isLoading{
+                                                ProgressView()
+                                                    .controlSize(.large)
+                                                    .padding(.top,-50)
+                                                    .foregroundStyle(.white)
                                             } else {
-                                                Image("Play")
+                                                Button {
+                                                    viewModel.impactNotification.notificationOccurred(.success)
+                                                    playPause()
+                                                    if isPlaying {
+                                                        scale = 1.5
+                                                    } else {
+                                                        scale = 1
+                                                    }
+                                                    
+                                                } label: {
+                                                    if isPlaying {
+                                                        Image("Pause")
+                                                    } else {
+                                                        Image("Play")
+                                                    }
+                                                }
+                                                .scaleEffect(scale)
+                                                .animation(.easeIn(duration: 0.3), value: scale)
+                                                .padding(.top,-50)
+                                                .foregroundColor(isLoading ? Color.gray : Color("Buttons"))
                                             }
-                                        }
-                                        .padding(.top,-60)
-                                        .foregroundColor(Color("Buttons"))
+                                            
                                         
                                     }
                                     Text("Publicado: \(model.creation_date.formatted(.dateTime.month().year()))")
@@ -441,6 +461,11 @@ struct PostCardPodcastDetail: View {
                 await Play()
             }
             
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                isLoading = false
+            }
+            
+            
         }
         .onReceive(timer){ (_) in
             
@@ -464,11 +489,11 @@ struct PostCardPodcastDetail: View {
                     self.isPlaying.toggle()
                     value = 0.0
                 } else {
-                                        print("Value = ",value)
-                                        print("Duration= ", durationSec)
+                    print("Value = ",value)
+                    print("Duration= ", durationSec)
                 }
             } else {
-                isPlaying = false
+//                isPlaying = false
             }
         }
         .onDisappear(){
@@ -480,27 +505,29 @@ struct PostCardPodcastDetail: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    func Play() async {
+    func Play() async{
         let storage = Storage.storage().reference(forURL: self.model.main_media)
-        
         
         storage.downloadURL { url, error in
             if error != nil {
                 print(error ?? "Error")
             } else {
                 do {
-                    try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+                    let audioLoading = try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+                    if audioLoading != nil {
+//                        isLoading = false
+                    }
                 }
                 catch{
-                    //                    Report for an error
-                    
+                    //Report for an error
+                    print("Not catched audio")
                 }
                 
                 audioPlayer = AVPlayer(url: url!)
                 
                 let asset = AVURLAsset(url: url!)
                 
-                audioPlayer.pause()
+//                audioPlayer.pause()
                 //                    let durationSec = try await asset.load(.duration)
                 //                    durationSec = CMTimeGetSeconds(asset.duration) - 4
                 durationSec = CMTimeGetSeconds(asset.duration) - 4

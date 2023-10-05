@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1055886525857-b34m9jsffh26vbbe32472l4e9vn9nqih.apps.googleusercontent.com</string>
+	<string>1055886525857-o1ao9t835mq1rrdq2eno9a1cc5dj15sb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1055886525857-b34m9jsffh26vbbe32472l4e9vn9nqih</string>
+	<string>com.googleusercontent.apps.1055886525857-o1ao9t835mq1rrdq2eno9a1cc5dj15sb</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1055886525857-1q5aubqidd1or7v087lirgld6i3kd6md.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCj-hujKedAMdhbp47l5uvXEJdrxTZx6IE</string>
 	<key>GCM_SENDER_ID</key>
@@ -19,16 +21,16 @@
 	<key>STORAGE_BUCKET</key>
 	<string>baudoapp-c89ed.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1055886525857:ios:4d41ed10ca4dea18ef37e0</string>
+	<string>1:1055886525857:ios:3c19191038cc102bef37e0</string>
 </dict>
 </plist>
